@@ -1,14 +1,16 @@
-a = [7, 5, 3, 3, 2]
-num = int(input('введите число: '))
-quan = a.count(num)
-for i in a:
-    if quan > 0:
-        a.insert(a.index(num) + quan, num)
-        break
-    else:
-        if num > i:
-            a.insert(a.index(i), num)
-            break
-        elif num < a[len(a) - 1]:
-            a.append(num)
-print(a)
+def total():
+    result = 0
+    e = False
+    while e == False:
+        number = input('Введите число или Q для выхода - ').split()
+        result_1 = 0
+        for i in range(len(number)):
+            if number[i] == 'q' or number[i] == 'Q':
+                e = True
+                break
+            else:
+                result_1 = result_1 + int(number[i])
+        result = result + result_1
+        print(f'Текущая сумма равна {result}')
+    print(f'Результирующая сумма равна {result}')
+total()

@@ -1,4 +1,4 @@
-num = [str(i) for i in input('Введите элементы списка через пробел: ').split()]
-for i in range(1, len(num), 2):
-    num[i - 1], num[i] = num[i], num[i - 1]
-print(' '.join([str(i) for i in num]))
+def my_func(name, surname, old, city, email, phone):
+    print(name, surname, old, city, email, phone)
+
+my_func(name= 'Павел', surname='Кудряшов', old=1991, city='Санкт-Петербург', email='email', phone='добавочный 03')

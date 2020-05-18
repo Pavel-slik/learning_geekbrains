@@ -1,17 +1,10 @@
-seasons_list = ['зима', 'весна', 'лето', 'осень']
-seasons_dict = {1: 'winter', 2: 'spring', 3: 'summer', 4: 'autumn'}
-month = int(input('Введите номер месяца: '))
-if month == 1 or month == 12 or month == 2:
-    print(seasons_dict.get(1))
-    print(seasons_list[0])
-elif month == 3 or month == 4 or month ==5:
-    print(seasons_dict.get(2))
-    print(seasons_list[1])
-elif month == 6 or month == 7 or month == 8:
-    print(seasons_dict.get(3))
-    print(seasons_list[2])
-elif month == 9 or month == 10 or month == 11:
-    print(seasons_dict.get(4))
-    print(seasons_list[3])
-else:
-    print('Такого месяца не существует')
+def function(a, b, c):
+    sequence = [a, b, c]
+    amount = []
+    max_1 = max(sequence)
+    amount.append(max_1)
+    sequence.remove(max_1)
+    max_2 = max(sequence)
+    amount.append(max_2)
+    print(sum(amount))
+print('Введите три аргумента: ', function(int(input('1-е число: ')), int(input('2-е число: ')), int(input('3-е число: '))))
